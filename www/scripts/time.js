@@ -1,6 +1,20 @@
-﻿
-(function () {
-    document.getElementById('submit').addEventListener('click', getTime);
+﻿(function () { // executes automatically when file loads
+
+    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
+
+    function onDeviceReady() {
+        document.getElementById('submit').addEventListener('click', getTime);
+
+        //hide footer when input box is on focus
+        $(document).on('focus', 'input, textarea', function () {
+            $("footer[data-role=footer]").hide();
+        });
+
+        //show footer when input is NOT on focus
+        $(document).on('blur', 'input, textarea', function () {
+            $("footer[data-role=footer]").show();
+        });
+    };
 
     function getTime() {
         var distance = $('#distance-input').val();
@@ -44,7 +58,7 @@
                 var m = Math.floor(total_seconds % 3600 / 60);
                 var s = Math.floor(total_seconds % 3600 % 60);
                 var total_time = ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s);
-                $('#time').text('Total Time: '+total_time);
+                $('#time').text('Total Time: ' + total_time);
                 $('#time').show();
             }
         }

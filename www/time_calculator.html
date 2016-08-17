@@ -5,40 +5,49 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/time_calc.css">
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
     <title>Time Calculator</title>
 </head>
 <body>
-    <div class="app"></div>
-    <h1>Time Calculator</h1>
-    <a href="index.html" id="home" class="ui-btn" data-transition="slide" data-direction="reverse">Home</a>
-    <div class="nav-buttons">
-        <a href="pace_calculator.html" class="ui-btn ui-btn-inline" data-transition="flip">Pace Calc</a>
-        <a href="distance_calculator.html" class="ui-btn ui-btn-inline" data-transition="flip">Distance Calc</a>
+    <div data-role="page" id="pace-page">
+        <div data-role="header" class="header">
+            <a href="index.html" id="home" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext" data-transition="slide" data-direction="reverse">Home</a>
+            <h1 id="app-title">Time Calculator</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div class="nav-buttons">
+                <a href="pace_calculator.html" class="ui-btn ui-btn-inline" data-transition="flip">Pace Calc</a>
+                <a href="distance_calculator.html" class="ui-btn ui-btn-inline" data-transition="flip">Distance Calc</a>
+            </div>
+            <form class="inputs">
+                <div class="distance">
+                    <label for="distance">Distance: </label>
+                    <input id="distance-input" name="distance" type="number" style="width:50px;">
+                    <fieldset class="fieldset-auto-width" data-role="controlgroup" data-type="horizontal">
+                        <legend>Units</legend>
+                        <input type="radio" id="mile-unit" name="unit" value="miles" checked> Miles
+                        <input type="radio" id="km-unit" name="unit" value="km"> KM
+                    </fieldset>
+                </div>
+                <div class="pace">
+                    <label for="pace">Pace per unit (mm:ss): </label>
+                    <input id="minutes-input" name="minutes" type="number" style="width:20px;" /> :
+                    <input id="seconds-input" name="seconds" type="number" style="width:30px;" />
+                </div>
+                <button type="button" id="submit" data-role="button" data-icon="search">Calculate Time</button>
+            </form>
+            <ul id="time" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow not-displayed">
+                <li data-role="list-divider" id="title" class="ui-li-divider ui-bar-a"></li>
+                <li>Time: <span id="time"></span></li>
+            </ul>
+            <div id="error-msg" class="not-displayed"></div>
+        </div>
+        <footer data-role="footer">
+            <h4>Jacob Young's Speed Gauge</h4>
+        </footer>
     </div>
-    <form class="inputs">
-        <div class="distance">
-            <label for="distance">Distance: </label>
-            <input id="distance-input" name="distance" style="width:50px;">
-            <fieldset class="fieldset-auto-width" data-role="controlgroup" data-type="horizontal">
-                <legend>Units</legend>
-                <input type="radio" id="mile-unit" name="unit" value="miles" checked> Miles
-                <input type="radio" id="km-unit" name="unit" value="km"> KM
-            </fieldset>
-        </div>
-        <div class="pace">
-            <label for="pace">Pace per unit (mm:ss): </label>
-            <input id="minutes-input" name="minutes" style="width:20px;" /> :
-            <input id="seconds-input" name="seconds" style="width:30px;" />
-        </div>
-        <button type="button" id="submit" data-role="button" data-icon="search">Calculate Time</button>
-        <div class="results">
-            <p id="error"></p>
-            <div id="time"></div>
-        </div>
-    </form>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script src="scripts/installed_scripts/jquery-3.1.0.min.js"></script>

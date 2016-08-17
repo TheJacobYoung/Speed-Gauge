@@ -1,6 +1,20 @@
-﻿
-(function () {
-    document.getElementById('submit').addEventListener('click', getDistance);
+﻿(function () { // executes automatically when file loads
+
+    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
+
+    function onDeviceReady() {
+        document.getElementById('submit').addEventListener('click', getDistance);
+
+        //hide footer when input box is on focus
+        $(document).on('focus', 'input, textarea', function () {
+            $("footer[data-role=footer]").hide();
+        });
+
+        //show footer when input is NOT on focus
+        $(document).on('blur', 'input, textarea', function () {
+            $("footer[data-role=footer]").show();
+        });
+    };
 
     function getDistance() {
         var hours = $('#hours-input').val();
@@ -37,12 +51,12 @@
             var distance = total_seconds / total_seconds_pace;
             var unit = $('input[name="unit"]:checked').val();
             if (unit == "miles") {
-                $('#miles').text('Miles: ' + distance);
-                $('#km').text('KM: ' + distance * 1.60934);
+                $('#miles').text(distance);
+                $('#km').text(distance * 1.60934);
             }
             else if (unit == "km") {
-                $('#km').text('KM: ' + distance);
-                $('#miles').text('Miles: ' + distance * 0.621371);
+                $('#km').text(distance);
+                $('#miles').text(distance * 0.621371);
             }
             $('#distance').show();
         }

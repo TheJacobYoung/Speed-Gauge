@@ -1,5 +1,4 @@
 ﻿(function () { // executes automatically when file loads
-    "use strict";
 
     document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
