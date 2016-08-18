@@ -1,0 +1,27 @@
+﻿h1 {
+    position: relative;
+    top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.picture {
+    content: url(../images/jacobyoung.png); 
+    position: relative;             
+    display: block;
+    margin: 0 auto;
+    height: 180px;
+}
+
+#framework {
+    font-size: 90%;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left:50%;
+    margin-left: -50%;
+    bottom:0;
+}

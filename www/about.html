@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <!--
@@ -10,25 +10,31 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-    <title>Pace Calculator</title>
+    <title>About</title>
 </head>
 <body>
-    <div class="picture"></div>
-    <div class="buttons">
-        <a href="pace_calculator.html" class="ui-btn ui-shadow" data-role="button" data-transition="slide">Pace Calculator</a>
-        <a href="distance_calculator.html" class="ui-btn ui-shadow" data-role="button" data-transition="slide">Distance Calculator</a>
-        <a href="time_calculator.html" class="ui-btn ui-shadow" data-role="button" data-transition="slide">Time Calculator</a>
+    <div data-role="page" id="pace-page">
+        <div data-role="header" class="header">
+            <a href="index.html" id="home" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flip">Home</a>
+            <h1 id="app-title">About</h1>
+            <div class="picture"></div>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Author: <b>Jacob Young</b></p>
+            <p>Year: <b>2016</b></p>
+            <p>Development Framework: <b id="framework">Apache Cordova</b></p>
+            <p>The homepage picture was not created by me. All credit goes to the artist who created it.</p>
+            <p>The picture was taken from the following website:</p> 
+            <p>http://www.shapesense.com</p>
+            <footer data-role="footer">
+                <h4>Jacob Young's Speed Gauge</h4>
+            </footer>
+        </div>
     </div>
-    <footer data-role="footer">
-        <h4>Jacob Young's Speed Gauge</h4>
-    </footer>
-    <a href="about.html" id="about" class="ui-btn" data-role="button" data-transition="flip">About</a>
-    <a href="help.html" id="help" class="ui-btn" data-role="button" data-transition="flip">Help</a>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
     <script src="scripts/installed_scripts/jquery-3.1.0.min.js"></script>
     <script src="scripts/installed_scripts/jquery.mobile-1.4.5.min.js"></script>
 </body>

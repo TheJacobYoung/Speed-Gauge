@@ -20,18 +20,18 @@
         var distance = $('#distance-input').val();
         if (distance.length == 0) {
             $('#time').hide();
-            $('#error').text("Distance must be entered");
-            $('#error').show();
+            $('#error-msg').text("Distance must be entered");
+            $('#error-msg').show();
         }
         else if (!parseFloat(distance)) {
             $('#time').hide();
-            $('#error').text("Distance must be an integer greater than 0");
-            $('#error').show();
+            $('#error-msg').text("Distance must be an integer greater than 0");
+            $('#error-msg').show();
         }
         else if (distance <= 0) {
             $('#time').hide();
-            $('#error').text("Distance must be greater than 0");
-            $('#error').show();
+            $('#error-msg').text("Distance must be greater than 0");
+            $('#error-msg').show();
         }
         else {
             var minutes = $('#minutes-input').val();
@@ -43,16 +43,16 @@
 
             if (minutes < 0 || seconds < 0) {
                 $('#time').hide();
-                $('#error').text("All inputs must be positive");
-                $('#error').show();
+                $('#error-msg').text("All inputs must be positive");
+                $('#error-msg').show();
             }
             else if (isNaN(minutes) || isNaN(seconds)) {
                 $('#time').hide();
-                $('#error').text("All inputs must be numeric");
-                $('#error').show();
+                $('#error-msg').text("All inputs must be numeric");
+                $('#error-msg').show();
             }
             else {
-                $('#error').hide();
+                $('#error-msg').hide();
                 var total_seconds = (parseInt(seconds) + minutes * 60) * distance;
                 var h = Math.floor(total_seconds / 3600);
                 var m = Math.floor(total_seconds % 3600 / 60);

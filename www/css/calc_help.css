@@ -1,0 +1,19 @@
+﻿h1 {
+    position: relative;
+    top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    position: relative;
+    top: 20px;
+}
+
+#back {
+    position: relative;
+    font-size: 200%;
+    text-align: center;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+}

@@ -15,6 +15,7 @@
         <div data-role="header" class="header">
             <a href="index.html" id="home" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext" data-transition="slide" data-direction="reverse">Home</a>
             <h1 id="app-title">Pace Calculator</h1>
+            <a href="pace_help.html" id="helpLink" class="ui-btn" data-transition="flip">Help</a>
         </div>
         <div role="main" class="ui-content">
             <div class="nav-buttons">
@@ -41,9 +42,9 @@
             </form>
             <ul id="pace" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow not-displayed">
                 <li data-role="list-divider" id="title" class="ui-li-divider ui-bar-a"></li>
-                <li>Mile Pace: <span id="mile-pace"></span>/mile</li>
-                <li>KM Pace: <span id="km-pace"></span>/km</li>
-                <li>MPH: <span id="mph"></span> mph</li>
+                <li class="output">Mile Pace: <span id="mile-pace"></span>/mile</li>
+                <li class="output">KM Pace: <span id="km-pace"></span>/km</li>
+                <li class="output">MPH: <span id="mph"></span> mph</li>
             </ul>
             <div id="error-msg" class="not-displayed"></div>
         </div>
@@ -54,6 +55,7 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script src="scripts/installed_scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/installed_scripts/jquery.mobile-1.4.5.min.js"></script>
     <script src="scripts/pace.js"></script>
 </body>
 </html>

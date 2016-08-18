@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/help.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <title>Help</title>
+</head>
+<body>
+    <div data-role="page" id="pace-page">
+        <div data-role="header" class="header">
+            <a href="index.html" id="home" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flip">Home</a>
+            <h1 id="app-title">Help</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <p><span class="calc">Pace Calculator:</span> Want to know how fast you're going? Enter distance and time to find out what the pace/speed is!</p>
+            <p><span class="calc">Distance Calculator:</span> Want to know how far you would go if you went for a certain amount of time at a certain pace? Enter time and pace to see how much distance is covered!</p>
+            <p><span class="calc">Time Calculator:</span> Want to know how long it would take to go a distance at a certain pace? Enter distance and pace to find out how long it takes!</p>
+            <footer data-role="footer">
+                <h4>Jacob Young's Speed Gauge</h4>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script src="scripts/installed_scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/installed_scripts/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>
+

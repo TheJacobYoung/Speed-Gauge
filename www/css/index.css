@@ -1,4 +1,4 @@
-.app {
+.picture {
     background: url(../images/runningman.png) no-repeat center top; 
     position: absolute;             
     left: 50%;
@@ -20,9 +20,25 @@
      margin-right: auto;
 }
 
+#help {
+    position:absolute;
+    bottom:0;
+    left: 5px;
+    font-size: 75%;
+}
+
+#about {
+    position:absolute;
+    bottom:0;
+    right: 5px;
+    font-size: 75%;
+}
+
 footer {
-    position: fixed;
+    position: absolute;
     width: 100%;
     text-align: center;
+    left:49%;
+    margin-left: -50%;
     bottom:0;
 }
